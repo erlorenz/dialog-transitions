@@ -1,0 +1,25 @@
+.box {
+  padding: var(--box-padding, 1rem);
+  height: 100%;
+}
+
+.flow {
+  > * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gutter, 0.5em);
+  justify-content: var(--_justify, start);
+
+  &:has(svg) {
+    vertical-align: baseline;
+  }
+
+  &[data-variant="end"] {
+    --_justify: end;
+  }
+}

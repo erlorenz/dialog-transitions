@@ -1,0 +1,10 @@
+{
+  "$schema": "https://unpkg.com/vscode-css-languageservice@5.1.9/docs/customData.schema.json",
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@scope",
+      "description": "Declares a css scope block."
+    }
+  ]
+}

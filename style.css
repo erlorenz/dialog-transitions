@@ -1,0 +1,65 @@
+@layer reset, layout, components, utilities;
+
+@import "./layout.css" layer(layout);
+@import "./dialog.css" layer(components);
+
+@layer reset {
+  * {
+    box-sizing: border-box;
+  }
+
+  img,
+  svg {
+    height: auto;
+    max-width: 100%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  body {
+    font-family: system-ui;
+  }
+
+  dialog {
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: inherit;
+    font-size: inherit;
+  }
+}
+
+@layer components {
+  .btn {
+    --bg: hsl(0, 0%, 90%);
+
+    background: var(--bg);
+    border-color: transparent;
+    color: black;
+    padding: 0.35rem 0.75rem;
+    border-radius: 0.25rem;
+
+    &:hover {
+      background-color: oklch(from var(--bg) calc(l - 0.08) c h);
+    }
+  }
+
+  .icon {
+    width: 1.2em;
+    fill: currentcolor;
+  }
+}
+
+@layer utilities {
+  .m-0 {
+    margin: 0;
+  }
+}
